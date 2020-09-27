@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:layout_margin="8dp"
+    android:elevation="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:text="Song title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_rank"
+            android:id="@+id/tv_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:text="Artist"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_rank"
+            android:id="@+id/tv_item_artist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"/>
+
+        <com.libRG.CustomTextView
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv_rank"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            app:lib_setRadius="3dp"
+            android:text="1"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            app:lib_setRoundedBGColor="@color/colorAccent"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:lib_setRoundedView="true"
+            app:lib_setShape="oval"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
