@@ -20,16 +20,18 @@ object Spotify {
         .showAuthView(true)
         .build()
 
-    fun connect(context: Context) {
+    fun connect(context: Context , connectionState: SpotifyConnectionState) {
         if (spotifyAppRemote?.isConnected == true) {
             return
         }
         val connectionListener = object : Connector.ConnectionListener {
             override fun onConnected(spotifyAppRemote: SpotifyAppRemote) {
                 this@Spotify.spotifyAppRemote = spotifyAppRemote
+                connectionState.onSuccess()
             }
 
             override fun onFailure(throwable: Throwable) {
+                connectionState.onFailure(throwable.message)
             }
         }
         SpotifyAppRemote.connect(context, connectionParams, connectionListener)
