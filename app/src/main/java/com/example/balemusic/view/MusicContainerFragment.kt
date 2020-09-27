@@ -45,8 +45,6 @@ class MusicContainerFragment : Fragment() {
         val pos = arguments?.getInt(Constants.MUSIC_ITEM_POS)
         val size = arguments?.getInt(Constants.LIST_SIZE_KEY)
 
-        Toast.makeText(context, pos.toString(), Toast.LENGTH_SHORT).show()
-
         val pagerAdapter = MusicPagerAdapter(activity as AppCompatActivity)
         vp_music.isUserInputEnabled = false
         vp_music.adapter = pagerAdapter
