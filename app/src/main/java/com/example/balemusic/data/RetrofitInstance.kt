@@ -12,7 +12,7 @@ object RetrofitInstance {
         .addInterceptor {
             val request = it.request().newBuilder()
                 .addHeader("x-rapidapi-host", "billboard-api2.p.rapidapi.com")
-                .addHeader("x-rapidapi-key", "400698a87dmsh5ca5c8c332a4accp1d306ajsn46cdc083c54c")
+                .addHeader("x-rapidapi-key", "4460bcb80cmsh92f4a4a1d5107c5p1af0bejsn774dfe31e1ea")
                 .addHeader("useQueryString", "true")
                 .build()
 
