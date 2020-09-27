@@ -1,4 +1,4 @@
-package com.example.balemusic
+package com.example.balemusic.view
 
 import android.os.Bundle
 import android.util.Log
@@ -6,17 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.balemusic.R
 import com.example.balemusic.adapter.MusicRecyclerAdapter
 import com.example.balemusic.data.Music
 import com.example.balemusic.utils.Constants
 import com.example.balemusic.utils.RecyclerClickHandler
 import com.example.balemusic.viewmodel.SharedViewModel
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_search.*
 import java.lang.Exception
 
